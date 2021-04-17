@@ -5,11 +5,9 @@ $link-color: #149ddd;
 $link-hover-color: #37b3ed;
 $header-font-color: #fff;
 $header-background-color: #040b14;
-$photo-border-color:#2c2f3f;
-$icon-background-color:#212431;
+$photo-border-color: #2c2f3f;
+$icon-background-color: #212431;
 $nav-font-color: #a8a9b4;
-
-//Shared css
 
 //General css
 body {
@@ -36,19 +34,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   color: $header-font-color;
-  &__photo{
+
+  &__photo {
     margin: 1rem auto; //居中效果
     width: 7rem;
     border: 8px solid $photo-border-color;
     border-radius: 50%;
   }
-  &__paragraph{
+
+  &__paragraph {
     font-size: 1.5rem;
     text-align: center;
   }
-  &__icon{
+
+  &__icon {
     text-align: center;
-    &__item{
+
+    &__item {
       font-size: 1rem;
       color: $header-font-color;
       margin: 0 1rem;
@@ -57,22 +59,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //Navigation
-.navigation{
+.navigation {
   color: $header-font-color;
   padding-top: 2rem;
-  &__list{
+
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
-    &__item{
+
+    &__item {
       color: $nav-font-color;
       padding: 0.8rem 1rem;
       margin-bottom: 0.5rem;
       font-size: 1rem;
-      &__icon{
+
+      &__icon {
         font-size: 1.5rem;
         margin-right: 1rem;
       }
     }
   }
+}
+
+//Introduction
+.introduction {
+  background: url("../images/introduction.JPG");
+  height: 100vh;
 }

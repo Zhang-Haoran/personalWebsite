@@ -60,4 +60,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 1rem;
 }
 
+.introduction {
+  background: url("../images/introduction.JPG");
+  height: 100vh;
+}
+
 /*# sourceMappingURL=index.css.map */
