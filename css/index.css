@@ -1,9 +1,37 @@
+.skill__title, .project__title, .resume__title, .about__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  color: #173b6c;
+}
+
+.skill__title::after, .project__title::after, .resume__title::after, .about__title::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.2rem;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.skill__paragraph, .project__paragraph, .resume__paragraph, .about__paragraph {
+  margin-bottom: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+section {
+  padding: 4rem 0;
+  overflow: hidden;
 }
 
 .header {
@@ -24,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 .profile__photo {
   margin: 1rem auto;
   width: 7rem;
-  border: 8px solid #2c2f3f;
+  border: 0.5rem solid #2c2f3f;
   border-radius: 50%;
 }
 .profile__paragraph {
@@ -50,10 +78,13 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 .navigation__list__item {
-  color: #a8a9b4;
   padding: 0.8rem 1rem;
   margin-bottom: 0.5rem;
   font-size: 1rem;
+}
+.navigation__list__item a {
+  text-decoration: none;
+  color: #a8a9b4;
 }
 .navigation__list__item__icon {
   font-size: 1.5rem;
@@ -82,9 +113,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 .introduction__paragraph__animation {
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 0.3rem solid #149ddd;
+}
+
+.main {
+  margin-left: 16rem;
 }
 
 /*# sourceMappingURL=index.css.map */

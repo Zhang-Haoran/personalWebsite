@@ -8,6 +8,32 @@ $header-background-color: #040b14;
 $photo-border-color: #2c2f3f;
 $icon-background-color: #212431;
 $nav-font-color: #a8a9b4;
+$section-title-color: #173b6c;
+$section-underline-color:#149ddd;
+
+//Shared css
+%section-title-shared{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  color: $section-title-color;
+}
+
+%section-title-underline-shared{
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 0.2rem;
+  background: $section-underline-color;
+  bottom: 0;
+  left: 0;
+}
+
+%section-paragraph-shared{
+  margin-bottom: 0;
+}
 
 //General css
 body {
@@ -16,6 +42,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", $common-font;
+}
+
+section {
+  padding: 4rem 0;
+  overflow: hidden;
 }
 
 //Header
@@ -38,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   &__photo {
     margin: 1rem auto; //居中效果
     width: 7rem;
-    border: 8px solid $photo-border-color;
+    border: 0.5rem solid $photo-border-color;
     border-radius: 50%;
   }
 
@@ -69,11 +100,13 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 
     &__item {
-      color: $nav-font-color;
       padding: 0.8rem 1rem;
       margin-bottom: 0.5rem;
       font-size: 1rem;
-
+      a{
+        text-decoration: none;
+        color: $nav-font-color;
+      }
       &__icon {
         font-size: 1.5rem;
         margin-right: 1rem;
@@ -103,10 +136,66 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.7rem;
     font-family: "Poppins", $common-font;
     &__animation{
-      padding-bottom: 4px;
-      letter-spacing: 1px;
-      border-bottom: 3px solid $link-color;
+      padding-bottom: 0.3rem;
+      letter-spacing: 0.1rem;
+      border-bottom: 0.3rem solid $link-color;
     }
   }
+}
 
+//Main
+.main{
+  margin-left: 16rem;
+}
+
+//About
+.about{
+  &__title{
+    @extend %section-title-shared;
+  }
+  &__title::after{
+    @extend %section-title-underline-shared;
+  }
+  &__paragraph{
+    @extend %section-paragraph-shared;
+  }
+}
+
+//Resume
+.resume{
+  &__title{
+    @extend %section-title-shared;
+  }
+  &__title::after{
+    @extend %section-title-underline-shared;
+  }
+  &__paragraph{
+    @extend %section-paragraph-shared;
+  }
+}
+
+//Project
+.project{
+  &__title{
+    @extend %section-title-shared;
+  }
+  &__title::after{
+    @extend %section-title-underline-shared;
+  }
+  &__paragraph{
+    @extend %section-paragraph-shared;
+  }
+}
+
+//Skill
+.skill{
+  &__title{
+    @extend %section-title-shared;
+  }
+  &__title::after{
+    @extend %section-title-underline-shared;
+  }
+  &__paragraph{
+    @extend %section-paragraph-shared;
+  }
 }
