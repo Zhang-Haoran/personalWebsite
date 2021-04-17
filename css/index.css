@@ -11,25 +11,53 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 19rem;
-  padding: 0 15px;
+  width: 18rem;
+  padding: 0 1rem;
   background: #040b14;
 }
 
 .profile {
   display: flex;
   flex-direction: column;
+  color: #fff;
 }
 .profile__photo {
-  margin: 15px auto;
-  width: 8rem;
+  margin: 1rem auto;
+  width: 7rem;
   border: 8px solid #2c2f3f;
   border-radius: 50%;
 }
 .profile__paragraph {
   font-size: 1.5rem;
   text-align: center;
+}
+.profile__icon {
+  text-align: center;
+}
+.profile__icon__item {
+  font-size: 1rem;
   color: #fff;
+  margin: 0 1rem;
+}
+
+.navigation {
+  color: #fff;
+  padding-top: 2rem;
+}
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navigation__list__item {
+  color: #a8a9b4;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.navigation__list__item__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
