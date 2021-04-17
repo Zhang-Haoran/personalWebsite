@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 18rem;
+  width: 14rem;
   padding: 0 1rem; //导航栏左边间隙
   background: $header-background-color;
 }
@@ -84,6 +84,29 @@ h1, h2, h3, h4, h5, h6 {
 
 //Introduction
 .introduction {
-  background: url("../images/introduction.JPG");
+  background: url("../images/introduciton.jpg") no-repeat;
+  background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  &__title{
+    font-size: 4rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    line-height: 3.5rem;
+  }
+  &__paragraph{
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    font-family: "Poppins", $common-font;
+    &__animation{
+      padding-bottom: 4px;
+      letter-spacing: 1px;
+      border-bottom: 3px solid $link-color;
+    }
+  }
+
 }
