@@ -9,6 +9,10 @@ $icon-background-color: #212431;
 $nav-font-color: #a8a9b4;
 $section-title-color: #173b6c;
 $section-underline-color:#149ddd;
+$resume-subtitle-color: #050d18;
+$resume-banner-color: #1f5297;
+$resume-degree-color: #050d18;
+$resume-duration-color: #e4edf9;
 
 //Shared css
 %section-title-shared{
@@ -143,7 +147,7 @@ section {
   }
 }
 
-//Main
+//Main Content
 .main{
   margin-left: 17rem;
 }
@@ -159,6 +163,25 @@ section {
   &__paragraph{
     @extend %section-paragraph-shared;
   }
+  ul{
+    list-style: none;
+    padding: 0;
+    li{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      strong{
+        margin-right: 1rem;
+      }
+    }
+    i{
+      font-size: 1rem;
+      margin-right: 0.4rem;
+      color: $section-underline-color;
+      line-height: 0;
+    }
+  }
 }
 
 //Resume
@@ -169,8 +192,47 @@ section {
   &__title::after{
     @extend %section-title-underline-shared;
   }
+  &__subtitle{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $resume-subtitle-color;
+  }
   &__paragraph{
     @extend %section-paragraph-shared;
+    padding: 0 0 1rem 1rem;
+    margin-top: -0.1rem;
+    border-left: 0.2rem solid $resume-banner-color;
+    position: relative;
+    h4{
+      line-height: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+      color: $resume-degree-color;
+      margin-bottom: 0.8rem;
+    }
+    h5{
+      font-size: 1rem;
+      background: $resume-duration-color;
+      padding: 0.2rem 1rem;
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__paragraph::before{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    left: -0.6rem;
+    top: 0;
+    background: #fff;
+    border: 0.15rem solid $resume-banner-color;
   }
 }
 
@@ -195,7 +257,23 @@ section {
   &__title::after{
     @extend %section-title-underline-shared;
   }
-  &__paragraph{
-    @extend %section-paragraph-shared;
+  &__bar{
+    height: 4rem;
+    display: block;
+    background: none;
+    border-radius: 0;
+    &__label{
+      padding: 0;
+      margin: 0 0 0.5rem 0;
+      text-transform: uppercase;
+      display: block;
+      font-weight: 600;
+      font-family: "Poppins", $common-font;
+      color: $resume-subtitle-color;
+      &__percent{
+        float: right;
+        font-style: normal;
+      }
+    }
   }
 }
