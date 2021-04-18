@@ -1,8 +1,7 @@
 //Variable
 $common-font: sans-serif;
-$font-color: #272829;
+$body-font-color: #272829;
 $link-color: #149ddd;
-$link-hover-color: #37b3ed;
 $header-font-color: #fff;
 $header-background-color: #040b14;
 $photo-border-color: #2c2f3f;
@@ -38,6 +37,7 @@ $section-underline-color:#149ddd;
 //General css
 body {
   font-family: "Open Sans", $common-font;
+  color: $body-font-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -145,7 +145,7 @@ section {
 
 //Main
 .main{
-  margin-left: 16rem;
+  margin-left: 17rem;
 }
 
 //About

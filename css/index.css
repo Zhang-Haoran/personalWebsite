@@ -23,6 +23,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: #272829;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -119,7 +120,7 @@ section {
 }
 
 .main {
-  margin-left: 16rem;
+  margin-left: 17rem;
 }
 
 /*# sourceMappingURL=index.css.map */
