@@ -17,7 +17,7 @@
   left: 0;
 }
 
-.project__paragraph, .resume__paragraph, .about__paragraph {
+.resume__paragraph, .about__paragraph {
   margin-bottom: 0;
 }
 
@@ -183,6 +183,51 @@ section {
   top: 0;
   background: #fff;
   border: 0.15rem solid #1f5297;
+}
+
+.project__card--project1 {
+  background: url("../images/project1.png") no-repeat;
+  background-size: 33rem 20rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2px 2px 2px 2px;
+  position: relative;
+  width: 33rem;
+  height: 30rem;
+}
+.project__card--project1__paragraph {
+  position: absolute;
+  left: 2rem;
+  top: 21rem;
+}
+.project__card--project1__paragraph h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #050d18;
+}
+.project__card--project2 {
+  background: url("../images/project2.png") no-repeat;
+  background-size: 33rem 20rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2px 2px 2px 2px;
+  position: relative;
+  width: 33rem;
+  height: 30rem;
+}
+.project__card--project2__paragraph {
+  position: absolute;
+  left: 2rem;
+  top: 21rem;
+}
+.project__card--project2__paragraph h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #050d18;
 }
 
 .skill__bar {
