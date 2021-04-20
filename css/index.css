@@ -190,15 +190,16 @@ section {
   background-size: 33rem 20rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  margin: 2px 2px 2px 2px;
+  margin: 2px 2px 20px 2px;
   position: relative;
   width: 33rem;
-  height: 30rem;
+  height: 32rem;
 }
 .project__card--project1__paragraph {
   position: absolute;
   left: 2rem;
   top: 21rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 .project__card--project1__paragraph h3 {
   font-size: 1.5rem;
@@ -215,12 +216,13 @@ section {
   margin: 2px 2px 2px 2px;
   position: relative;
   width: 33rem;
-  height: 30rem;
+  height: 32rem;
 }
 .project__card--project2__paragraph {
   position: absolute;
   left: 2rem;
   top: 21rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 .project__card--project2__paragraph h3 {
   font-size: 1.5rem;
