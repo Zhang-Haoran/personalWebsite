@@ -136,6 +136,9 @@ section {
       a {
         text-decoration: none;
         color: $nav-font-color;
+        &:hover{
+          color: $header-font-color;
+        }
       }
 
       &__icon {
@@ -316,6 +319,9 @@ section {
         color: $resume-subtitle-color;
       }
     }
+    &:hover{
+      opacity: 0.8;
+    }
   }
 
   &__card--project2 {
@@ -341,6 +347,9 @@ section {
         margin-bottom: 0.5rem;
         color: $resume-subtitle-color;
       }
+    }
+    &:hover{
+      opacity: 0.8;
     }
   }
 }

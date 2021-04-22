@@ -105,6 +105,9 @@ section {
   text-decoration: none;
   color: #a8a9b4;
 }
+.navigation__list__item a:hover {
+  color: #fff;
+}
 .navigation__list__item__icon {
   font-size: 1.5rem;
   margin-right: 1rem;
@@ -229,6 +232,9 @@ section {
   margin-bottom: 0.5rem;
   color: #050d18;
 }
+.project__card--project1:hover {
+  opacity: 0.8;
+}
 .project__card--project2 {
   background: url("../images/project2.png") no-repeat;
   background-size: 33rem 20rem;
@@ -251,6 +257,9 @@ section {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: #050d18;
+}
+.project__card--project2:hover {
+  opacity: 0.8;
 }
 
 .skill__bar {
