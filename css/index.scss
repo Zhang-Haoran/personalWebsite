@@ -277,7 +277,7 @@ section {
     border: 0.15rem solid $resume-banner-color;
   }
 
-  &__download{
+  &__download {
     margin-top: 3rem;
   }
 }
@@ -302,12 +302,13 @@ section {
     width: 33rem;
     height: 32rem;
 
-    &__paragraph{
+    &__paragraph {
       position: absolute;
       left: 2rem;
       top: 21rem;
       padding: 1rem 1rem 1rem 1rem;
-      h3{
+
+      h3 {
         font-size: 1.5rem;
         font-weight: 700;
         margin-top: 0.5rem;
@@ -327,12 +328,13 @@ section {
     width: 33rem;
     height: 32rem;
 
-    &__paragraph{
+    &__paragraph {
       position: absolute;
       left: 2rem;
       top: 21rem;
       padding: 1rem 1rem 1rem 1rem;
-      h3{
+
+      h3 {
         font-size: 1.5rem;
         font-weight: 700;
         margin-top: 0.5rem;
