@@ -38,6 +38,35 @@ $resume-duration-color: #e4edf9;
   margin-bottom: 0;
 }
 
+@mixin project-card($background-image-path){
+  background: url($background-image-path) no-repeat;
+  background-size: 33rem 20rem;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  position: relative;
+  width: 33rem;
+  height: 32rem;
+
+  &__paragraph {
+    position: absolute;
+    left: 2rem;
+    top: 21rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: $resume-subtitle-color;
+    }
+  }
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
 //General css
 body {
   font-family: "Open Sans", $common-font;
@@ -87,41 +116,12 @@ section {
   width: 14rem;
   padding: 0 1rem; //导航栏左边间隙
   background: $header-background-color;
+  z-index: 99;
 }
 
 //Main Content
 .main {
   margin-left: 17rem;
-}
-
-//Responsive design
-.responsive__toggle{
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
-  background-color: $link-color;
-  color: $header-font-color;
-  font-size: 3rem;
-  text-align: center;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-}
-
-.responsive__toggle--active{
-  overflow: hidden;
-}
-.responsive__toggle--active .header{
-  left: 0;
-}
-
-@media (max-width: 1199px) {
-  .header {
-    left: -300px;
-  }
-  .main {
-    margin-left: 0;
-  }
 }
 
 //Profile
@@ -326,61 +326,11 @@ section {
   }
 
   &__card--project1 {
-    background: url("../images/project1.png") no-repeat;
-    background-size: 33rem 20rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 2px 2px 20px 2px;
-    position: relative;
-    width: 33rem;
-    height: 32rem;
-
-    &__paragraph {
-      position: absolute;
-      left: 2rem;
-      top: 21rem;
-      padding: 1rem 1rem 1rem 1rem;
-
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        color: $resume-subtitle-color;
-      }
-    }
-    &:hover{
-      opacity: 0.8;
-    }
+    @include project-card("../images/project1.png")
   }
 
   &__card--project2 {
-    background: url("../images/project2.png") no-repeat;
-    background-size: 33rem 20rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 2px 2px 2px 2px;
-    position: relative;
-    width: 33rem;
-    height: 32rem;
-
-    &__paragraph {
-      position: absolute;
-      left: 2rem;
-      top: 21rem;
-      padding: 1rem 1rem 1rem 1rem;
-
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        color: $resume-subtitle-color;
-      }
-    }
-    &:hover{
-      opacity: 0.8;
-    }
+    @include project-card("../images/project2.png")
   }
 }
 
@@ -414,5 +364,33 @@ section {
         font-style: normal;
       }
     }
+  }
+}
+
+//Responsive design
+.responsive__toggle{
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: $link-color;
+  color: $header-font-color;
+  font-size: 3rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.responsive__toggle--active .header{
+  left: 0;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -300px;
+  }
+  .main {
+    margin-left: 0;
   }
 }
