@@ -53,6 +53,7 @@ section {
   overflow: hidden;
 }
 
+//Remove the default link style
 .link-unstyled {
   &,
   &:visited,
@@ -82,11 +83,45 @@ section {
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
   width: 14rem;
   padding: 0 1rem; //导航栏左边间隙
   background: $header-background-color;
+}
+
+//Main Content
+.main {
+  margin-left: 17rem;
+}
+
+//Responsive design
+.responsive__toggle{
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: $link-color;
+  color: $header-font-color;
+  font-size: 3rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.responsive__toggle--active{
+  overflow: hidden;
+}
+.responsive__toggle--active .header{
+  left: 0;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -300px;
+  }
+  .main {
+    margin-left: 0;
+  }
 }
 
 //Profile
@@ -178,11 +213,6 @@ section {
       border-bottom: 0.3rem solid $link-color;
     }
   }
-}
-
-//Main Content
-.main {
-  margin-left: 17rem;
 }
 
 //About

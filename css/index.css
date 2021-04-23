@@ -56,13 +56,46 @@ section {
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
   width: 14rem;
   padding: 0 1rem;
   background: #040b14;
 }
 
+.main {
+  margin-left: 17rem;
+}
+
+.responsive__toggle {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: #149ddd;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.responsive__toggle--active {
+  overflow: hidden;
+}
+
+.responsive__toggle--active .header {
+  left: 0;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -300px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
 .profile {
   display: flex;
   flex-direction: column;
@@ -138,10 +171,6 @@ section {
   padding-bottom: 0.3rem;
   letter-spacing: 0.1rem;
   border-bottom: 0.3rem solid #149ddd;
-}
-
-.main {
-  margin-left: 17rem;
 }
 
 .about ul {
