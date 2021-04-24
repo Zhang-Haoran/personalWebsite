@@ -67,6 +67,33 @@ section {
   margin-left: 17rem;
 }
 
+.responsive__toggle {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: #149ddd;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.responsive__toggle--active .header {
+  left: 0;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -300px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
 .profile {
   display: flex;
   flex-direction: column;
@@ -280,34 +307,6 @@ section {
 .skill__bar__label__percent {
   float: right;
   font-style: normal;
-}
-
-.responsive__toggle {
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
-  background-color: #149ddd;
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  z-index: 99;
-}
-
-.responsive__toggle--active .header {
-  left: 0;
-}
-
-@media (max-width: 1199px) {
-  .header {
-    left: -300px;
-  }
-
-  .main {
-    margin-left: 0;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */
