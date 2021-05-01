@@ -232,9 +232,6 @@ section {
   background: #fff;
   border: 0.15rem solid #1f5297;
 }
-.resume__download {
-  margin-top: 3rem;
-}
 
 .project__card--project1 {
   background: url("../images/project1.png") no-repeat;
@@ -289,24 +286,65 @@ section {
   opacity: 0.8;
 }
 
-.skill__bar {
-  height: 4rem;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skill__card--html {
+  background: url("../images/html5.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
 }
-.skill__bar__label {
-  padding: 0;
-  margin: 0 0 0.5rem 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
+.skill__card--html:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
 }
-.skill__bar__label__percent {
-  float: right;
-  font-style: normal;
+.skill__card--css {
+  background: url("../images/css3.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.skill__card--css:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+.skill__card--js {
+  background: url("../images/js.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.skill__card--js:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+.skill__card--react {
+  background: url("../images/react.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.skill__card--react:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+.skill__card--nodejs {
+  background: url("../images/nodejs.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.skill__card--nodejs:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+.skill__card--aws {
+  background: url("../images/aws.svg") no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.skill__card--aws:hover {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=index.css.map */

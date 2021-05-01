@@ -67,6 +67,17 @@ $resume-duration-color: #e4edf9;
   }
 }
 
+@mixin skill-card($background-image-path){
+  background: url($background-image-path) no-repeat;
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+  &:hover{
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
 //General css
 body {
   font-family: "Open Sans", $common-font;
@@ -336,10 +347,6 @@ section {
     background: #fff;
     border: 0.15rem solid $resume-banner-color;
   }
-
-  &__download {
-    margin-top: 3rem;
-  }
 }
 
 //Project
@@ -371,25 +378,22 @@ section {
     @extend %section-title-underline-shared;
   }
 
-  &__bar {
-    height: 4rem;
-    display: block;
-    background: none;
-    border-radius: 0;
-
-    &__label {
-      padding: 0;
-      margin: 0 0 0.5rem 0;
-      text-transform: uppercase;
-      display: block;
-      font-weight: 600;
-      font-family: "Poppins", $common-font;
-      color: $resume-subtitle-color;
-
-      &__percent {
-        float: right;
-        font-style: normal;
-      }
-    }
+  &__card--html{
+    @include skill-card("../images/html5.svg")
+  }
+  &__card--css{
+    @include skill-card("../images/css3.svg")
+  }
+  &__card--js{
+    @include skill-card("../images/js.svg")
+  }
+  &__card--react{
+    @include skill-card("../images/react.svg")
+  }
+  &__card--nodejs{
+    @include skill-card("../images/nodejs.svg")
+  }
+  &__card--aws{
+    @include skill-card("../images/aws.svg")
   }
 }
