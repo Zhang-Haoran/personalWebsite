@@ -425,6 +425,9 @@ section {
       &__updated-time{
         font-size: 0.8rem;
       }
+      &__id{
+        display: none;
+      }
     }
   }
 }

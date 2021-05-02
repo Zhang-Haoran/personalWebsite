@@ -366,5 +366,8 @@ section {
 .blog__list__item__updated-time {
   font-size: 0.8rem;
 }
+.blog__list__item__id {
+  display: none;
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -1,4 +1,35 @@
 const url = `http://localhost:3001`;
+//UPDATE blog data from backend
+function updateBlogModal(id, title, content){
+    let blogsTitle = document.querySelector('#updateModalTitle');
+    let blogContent = document.querySelector('#updateModalContent');
+    blogsTitle.value = title;
+    blogContent.value = content;
+}
+
+function updateBlog(id, title, content){
+    try {
+        axios.put(`${url}/blogs/updated?id=${id}&title=${title}&content=${content}`).then((result)=>{
+            if (result.data === 'success'){
+                window.location.reload();
+            }
+        });
+    }catch (e){
+        console.log(e);
+    }
+}
+//DELETE blog data from backend
+function deleteBlog(id){
+    try {
+        axios.delete(`${url}/blogs/delete?id=${id}`).then((result)=>{
+            if (result.data === 'success'){
+                window.location.reload();
+            }
+        });
+    }catch (e){
+        console.log(e);
+    }
+}
 //POST blog data into backend
 function addBlog(){
     const blogsTitle = document.querySelector('#title').value;
@@ -26,8 +57,8 @@ function getBlogs() {
                 <p class="blog__list__item__content">${blog.content}</p>
                 <p class="blog__list__item__created-time">Created at: ${blog.created_time}</p>
                 <p class="blog__list__item__updated-time">Last updated: ${blog.updated_time}</p>
-                <button class="btn btn-primary">Update</button>
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary" onclick="updateBlogModal(${blog.id}, '${blog.title}', '${blog.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+                <button class="btn btn-danger" onclick="deleteBlog(${blog.id})">Delete</button>
              </li>`
             })
         });
