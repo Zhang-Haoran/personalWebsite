@@ -1,4 +1,4 @@
-.skill__title, .project__title, .resume__title, .about__title {
+.blog__title, .skill__title, .project__title, .resume__title, .about__title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -7,7 +7,7 @@
   color: #173b6c;
 }
 
-.skill__title::after, .project__title::after, .resume__title::after, .about__title::after {
+.blog__title::after, .skill__title::after, .project__title::after, .resume__title::after, .about__title::after {
   content: "";
   position: absolute;
   width: 3rem;
@@ -345,6 +345,14 @@ section {
 }
 .skill__card--aws:hover {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.blog__subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #050d18;
 }
 
 /*# sourceMappingURL=index.css.map */
