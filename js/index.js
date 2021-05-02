@@ -1,3 +1,19 @@
+//GET blogs data from backend
+const blogsElement = document.querySelector('.blog__list');
+const url = `http://localhost:3001`;
+async function getBlogs(){
+    try {
+        return axios.get(`${url}/blogs`);
+    }catch (e){
+        console.log(e);
+    }
+}
+getBlogs().then((result)=>{
+    result.data.map((blog)=>{
+        blogsElement.innerHTML += `<li>${blog.title}</li>`
+    })
+})
+
 //Responsive header
 const toggle = document.querySelector('.responsive__toggle');
 toggle.addEventListener('click', function (){
