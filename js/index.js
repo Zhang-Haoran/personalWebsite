@@ -6,7 +6,8 @@ function addBlog(){
     try {
         axios.post(`${url}/blogs/add?title=${blogsTitle}&content=${blogContent}`).then((result)=>{
             if (result.data === 'success'){
-                alert("Add Blog successfully");
+                const modalClose = document.querySelector('#staticBackdrop');
+                $('#staticBackdrop').modal('toggle');//手动关闭弹窗
             }
         });
     }catch (e){
