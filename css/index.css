@@ -347,12 +347,24 @@ section {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
 }
 
-.blog__subtitle {
+.blog__list__item {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.blog__list__item__title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   color: #050d18;
+  margin-bottom: 1rem;
+}
+.blog__list__item__created-time {
+  font-size: 0.8rem;
+}
+.blog__list__item__updated-time {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -406,4 +406,25 @@ section {
   &__title::after {
     @extend %section-title-underline-shared;
   }
+  &__list{
+    &__item{
+      box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 3rem;
+      &__title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        color: $resume-subtitle-color;
+        margin-bottom: 1rem;
+      }
+      &__created-time{
+        font-size: 0.8rem;
+      }
+      &__updated-time{
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
