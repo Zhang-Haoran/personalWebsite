@@ -1,15 +1,22 @@
 const url = `http://localhost:3001`;
-//UPDATE blog data from backend
+//Get previous content, put it into modal form and handle user click submit button
 function updateBlogModal(id, title, content){
     let blogsTitle = document.querySelector('#updateModalTitle');
     let blogContent = document.querySelector('#updateModalContent');
+    const updateModalButton = document.querySelector('#updateModalButton');
     blogsTitle.value = title;
     blogContent.value = content;
+    updateModalButton.addEventListener('click',function (){
+        const currentTitle = document.querySelector('#updateModalTitle').value;
+        const currentContent = document.querySelector('#updateModalContent').value;
+        updateBlog(id,currentTitle,currentContent);
+    })
 }
 
+//UPDATE blog data from backend
 function updateBlog(id, title, content){
     try {
-        axios.put(`${url}/blogs/updated?id=${id}&title=${title}&content=${content}`).then((result)=>{
+        axios.put(`${url}/blogs/update?id=${id}&title=${title}&content=${content}`).then((result)=>{
             if (result.data === 'success'){
                 window.location.reload();
             }
