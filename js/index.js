@@ -16,7 +16,7 @@ function updateBlogModal(id, title, content){
 //UPDATE blog data from backend
 function updateBlog(id, title, content){
     try {
-        axios.put(`${url}/blogs/update?id=${id}&title=${title}&content=${content}`).then((result)=>{
+        axios.put(`${url}/blogs?id=${id}&title=${title}&content=${content}`).then((result)=>{
             if (result.data === 'success'){
                 window.location.reload();
             }
@@ -28,7 +28,7 @@ function updateBlog(id, title, content){
 //DELETE blog data from backend
 function deleteBlog(id){
     try {
-        axios.delete(`${url}/blogs/delete?id=${id}`).then((result)=>{
+        axios.delete(`${url}/blogs?id=${id}`).then((result)=>{
             if (result.data === 'success'){
                 window.location.reload();
             }
@@ -42,7 +42,7 @@ function addBlog(){
     const blogsTitle = document.querySelector('#title').value;
     const blogContent = document.querySelector('#content').value;
     try {
-        axios.post(`${url}/blogs/add?title=${blogsTitle}&content=${blogContent}`).then((result)=>{
+        axios.post(`${url}/blogs?title=${blogsTitle}&content=${blogContent}`).then((result)=>{
             if (result.data === 'success'){
                 $('#staticBackdrop').modal('toggle');//手动关闭弹窗
                 window.location.reload();
