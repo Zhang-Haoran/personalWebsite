@@ -1,4 +1,4 @@
-const url = `http://localhost:3001`;
+const url = `http://localhost:3001/api/v1`;
 //Get previous content, put it into modal form and handle user click submit button
 function updateBlogModal(id, title, content){
     let blogsTitle = document.querySelector('#updateModalTitle');
