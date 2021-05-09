@@ -64,8 +64,8 @@ function getBlogs() {
                 <p class="blog__list__item__content">${blog.content}</p>
                 <p class="blog__list__item__created-time">Created at: ${blog.created_time}</p>
                 <p class="blog__list__item__updated-time">Last updated: ${blog.updated_time}</p>
-                <button class="btn btn-primary" onclick="updateBlogModal(${blog.id}, '${blog.title}', '${blog.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
-                <button class="btn btn-danger" onclick="deleteBlog(${blog.id})">Delete</button>
+                <button class="btn btn-outline-primary btn-sm" onclick="updateBlogModal(${blog.id}, '${blog.title}', '${blog.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+                <button class="btn btn-outline-danger btn-sm" onclick="deleteBlog(${blog.id})">Delete</button>
              </li>`
             })
         });
