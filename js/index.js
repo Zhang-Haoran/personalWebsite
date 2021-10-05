@@ -1,5 +1,5 @@
 //Url connect to backend
-const url = `http://13.59.0.242:80/api/v1`;
+const url = `http://haoran-backend:80/api/v1`;
 //Get previous content, put it into modal form and handle user click submit button
 function updateBlogModal(id, title, content){
     let blogsTitle = document.querySelector('#updateModalTitle');
