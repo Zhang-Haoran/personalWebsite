@@ -1,3 +1,4 @@
+//Url connect to backend
 const url = `https://13.59.0.242:443/api/v1`;
 //Get previous content, put it into modal form and handle user click submit button
 function updateBlogModal(id, title, content){
