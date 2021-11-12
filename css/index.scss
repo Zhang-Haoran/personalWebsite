@@ -372,6 +372,12 @@ section {
   &__card--project4 {
     @include project-card("../images/project4.png")
   }
+  &__card--project5 {
+    @include project-card("../images/project5.png")
+  }
+  &__card--project6 {
+    @include project-card("../images/project6.png")
+  }
 }
 
 //Skill
