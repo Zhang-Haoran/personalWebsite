@@ -1,24 +1,29 @@
 //Url connect to backend
-const url = `http://haoran-backend.tk:80/api/v1`;
+const url = `https://localhost:7071/api/v1`;
 //Get previous content, put it into modal form and handle user click submit button
-function updateBlogModal(id, title, content){
-    let blogsTitle = document.querySelector('#updateModalTitle');
-    let blogContent = document.querySelector('#updateModalContent');
+function updateCommentModal(id, title, content){
+    let commentsTitle = document.querySelector('#updateModalTitle');
+    let commentContent = document.querySelector('#updateModalContent');
     const updateModalButton = document.querySelector('#updateModalButton');
-    blogsTitle.value = title;
-    blogContent.value = content;
+    commentsTitle.value = title;
+    commentContent.value = content;
     updateModalButton.addEventListener('click',function (){
         const currentTitle = document.querySelector('#updateModalTitle').value;
         const currentContent = document.querySelector('#updateModalContent').value;
-        updateBlog(id,currentTitle,currentContent);
+        updateComment(id,currentTitle,currentContent);
     })
 }
 
-//UPDATE blog data from backend
-function updateBlog(id, title, content){
+//UPDATE comment data from backend
+function updateComment(id, title, content){
+    requestBody = {
+        "id":id,
+        "title": title,
+        "content": content
+    }
     try {
-        axios.put(`${url}/blogs?id=${id}&title=${title}&content=${content}`).then((result)=>{
-            if (result.data === 'success'){
+        axios.put(`${url}/comment/${id}`,requestBody).then((result)=>{
+            if (result.status === 204){
                 window.location.reload();
             }
         });
@@ -26,11 +31,11 @@ function updateBlog(id, title, content){
         console.log(e);
     }
 }
-//DELETE blog data from backend
-function deleteBlog(id){
+//DELETE comment data from backend
+function deleteComment(id){
     try {
-        axios.delete(`${url}/blogs?id=${id}`).then((result)=>{
-            if (result.data === 'success'){
+        axios.delete(`${url}/comment/${id}`).then((result)=>{
+            if (result.status === 204){
                 window.location.reload();
             }
         });
@@ -38,13 +43,17 @@ function deleteBlog(id){
         console.log(e);
     }
 }
-//POST blog data into backend
-function addBlog(){
-    const blogsTitle = document.querySelector('#title').value;
-    const blogContent = document.querySelector('#content').value;
+//POST comment data into backend
+function addComment(){
+    const commentsTitle = document.querySelector('#title').value;
+    const commentContent = document.querySelector('#content').value;
+    requestBody = {
+        "title": commentsTitle,
+        "content": commentContent
+    }
     try {
-        axios.post(`${url}/blogs?title=${blogsTitle}&content=${blogContent}`).then((result)=>{
-            if (result.data === 'success'){
+        axios.post(`${url}/comment`, requestBody).then((result)=>{
+            if (result.status === 201){
                 $('#staticBackdrop').modal('toggle');//手动关闭弹窗
                 window.location.reload();
             }
@@ -53,20 +62,20 @@ function addBlog(){
         console.log(e);
     }
 }
-//GET blogs data from backend
-function getBlogs() {
-    const blogsElement = document.querySelector('.blog__list');
+//GET comments data from backend
+function getComments() {
+    const commentsElement = document.querySelector('.comment__list');
     try {
-        axios.get(`${url}/blogs`).then((result) => {
-            result.data.map((blog) => {
-                blogsElement.innerHTML +=
-                    `<li class="blog__list__item">
-                <h3 class="blog__list__item__title">${blog.title}</h3> 
-                <p class="blog__list__item__content">${blog.content}</p>
-                <p class="blog__list__item__created-time">Created at: ${blog.created_time}</p>
-                <p class="blog__list__item__updated-time">Last updated: ${blog.updated_time}</p>
-                <button class="btn btn-outline-primary btn-sm" onclick="updateBlogModal(${blog.id}, '${blog.title}', '${blog.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
-                <button class="btn btn-outline-danger btn-sm" onclick="deleteBlog(${blog.id})">Delete</button>
+        axios.get(`${url}/comment`).then((result) => {
+            result.data.map((comment) => {
+                commentsElement.innerHTML +=
+                    `<li class="comment__list__item">
+                <h3 class="comment__list__item__title">${comment.title}</h3> 
+                <p class="comment__list__item__content">${comment.content}</p>
+                <p class="comment__list__item__created-time">Created at: ${comment.createdTime}</p>
+                <p class="comment__list__item__updated-time">Last updated: ${comment.updatedTime}</p>
+                <button class="btn btn-outline-primary btn-sm" onclick="updateCommentModal(${comment.id}, '${comment.title}', '${comment.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+                <button class="btn btn-outline-danger btn-sm" onclick="deleteComment(${comment.id})">Delete</button>
              </li>`
             })
         });
@@ -74,7 +83,7 @@ function getBlogs() {
         console.log(e);
     }
 }
-getBlogs();
+getComments();
 
 //Responsive header
 const toggle = document.querySelector('.responsive__toggle');

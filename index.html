@@ -82,9 +82,9 @@
             </a>
           </li>
           <li class="navigation__list__item">
-            <a href="#blog">
+            <a href="#comment">
               <i class="bi bi-book-fill navigation__list__item__icon"></i>
-              Blog
+              Comment
             </a>
           </li>
         </ul>
@@ -399,10 +399,10 @@
           </div>
         </div>
       </section>
-      <!--Blog-->
-      <section class="blog" id="blog">
+      <!--Comment-->
+      <section class="comment" id="comment">
         <div class="container">
-          <h2 class="blog__title">Blog</h2>
+          <h2 class="comment__title">Comment</h2>
           <div class="row">
             <div class="col-log-10">
               <button
@@ -410,17 +410,17 @@
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
-                Write new story
+                Write new comment
               </button>
             </div>
             <div class="col-lg-10">
-              <ul class="blog__list list-unstyled"></ul>
+              <ul class="comment__list list-unstyled"></ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Add Blog Modal -->
+      <!-- Add Comment Modal -->
       <div
         class="modal fade"
         id="staticBackdrop"
@@ -433,7 +433,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Blog</h5>
+              <h5 class="modal-title" id="staticBackdropLabel">Comment</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -472,7 +472,7 @@
               <button
                 type="submit"
                 class="btn btn-outline-primary"
-                onclick="addBlog()"
+                onclick="addComment()"
               >
                 Submit
               </button>
@@ -481,7 +481,7 @@
         </div>
       </div>
 
-      <!-- Update Blog Modal -->
+      <!-- Update Comment Modal -->
       <div
         class="modal fade"
         id="updateModal"
@@ -494,7 +494,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="updateModalLabel">Blog</h5>
+              <h5 class="modal-title" id="updateModalLabel">Comment</h5>
               <button
                 type="button"
                 class="btn-close"

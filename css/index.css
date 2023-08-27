@@ -1,4 +1,4 @@
-.blog__title, .skill__title, .project__title, .resume__title, .about__title {
+.comment__title, .skill__title, .project__title, .resume__title, .about__title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -7,7 +7,7 @@
   color: #173b6c;
 }
 
-.blog__title::after, .skill__title::after, .project__title::after, .resume__title::after, .about__title::after {
+.comment__title::after, .skill__title::after, .project__title::after, .resume__title::after, .about__title::after {
   content: "";
   position: absolute;
   width: 3rem;
@@ -451,26 +451,26 @@ section {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
 }
 
-.blog__list__item {
+.comment__list__item {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding: 1rem;
   margin-top: 3rem;
 }
-.blog__list__item__title {
+.comment__list__item__title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 0.5rem;
   color: #050d18;
   margin-bottom: 1rem;
 }
-.blog__list__item__created-time {
+.comment__list__item__created-time {
   font-size: 0.8rem;
 }
-.blog__list__item__updated-time {
+.comment__list__item__updated-time {
   font-size: 0.8rem;
 }
-.blog__list__item__id {
+.comment__list__item__id {
   display: none;
 }
 
