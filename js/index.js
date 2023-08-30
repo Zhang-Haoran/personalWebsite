@@ -17,7 +17,7 @@ function updateCommentModal(id, title, content){
 //UPDATE comment data from backend
 function updateComment(id, title, content){
     requestBody = {
-        "id":id,
+        "commentId":id,
         "title": title,
         "content": content
     }
@@ -74,8 +74,8 @@ function getComments() {
                 <p class="comment__list__item__content">${comment.content}</p>
                 <p class="comment__list__item__created-time">Created at: ${comment.createdTime}</p>
                 <p class="comment__list__item__updated-time">Last updated: ${comment.updatedTime}</p>
-                <button class="btn btn-outline-primary btn-sm" onclick="updateCommentModal(${comment.id}, '${comment.title}', '${comment.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
-                <button class="btn btn-outline-danger btn-sm" onclick="deleteComment(${comment.id})">Delete</button>
+                <button class="btn btn-outline-primary btn-sm" onclick="updateCommentModal(${comment.commentId}, '${comment.title}', '${comment.content}')" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+                <button class="btn btn-outline-danger btn-sm" onclick="deleteComment(${comment.commentId})">Delete</button>
              </li>`
             })
         });
